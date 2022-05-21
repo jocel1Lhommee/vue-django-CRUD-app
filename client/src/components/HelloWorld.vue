@@ -3,9 +3,21 @@
     <h1>
       Nom des Employés
     </h1>
-      <div :key="id" v-for="(employes,id) in employes">
-        <h2>{{employes}}</h2>
-      </div>
+    <br/>
+    <h2>JSON des employés</h2>
+    <p>{{employes}}</p>
+    <div v-for="(employe) in employes" :key="employe.id">
+      <h2>JSON de l'employé {{employe.id}}</h2>
+      <p>{{employe}}</p>
+    </div>
+    <h2>donée des employes</h2>
+    <p>{{employes}}</p>
+    <div v-for="(employe) in employes" :key="employe.id">
+      <h2>JSON de l'employé {{employe.id}}</h2>
+      <p>Nom: {{employe.name}}</p>
+      <p>Description: {{employe.description}}</p>
+    </div>
+    
     
   </div>
 </template>
@@ -21,7 +33,7 @@ export default {
   },
   mounted(){
     axios
-    .get('http://127.0.0.1:8000/employee/1')
+    .get('http://127.0.0.1:8000/employee/')
     .then((reponse) => {
       this.employes=reponse.data;
       console.log(this.employes);
