@@ -8,8 +8,8 @@
           <hr />
         </div>
         <div class="items price">
-          <p>Magnifique extérieur:</p>
-          <p>| 300 personnes max</p>
+          <p>Cérémonie civile possible</p>
+          <p>| 300 personnes maximum</p>
           <!--
                       <p class="old">$699</p>
           -->

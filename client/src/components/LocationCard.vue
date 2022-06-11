@@ -17,7 +17,9 @@
           <hr />
         </div>
         <div class="items price">
+          <!--
           <p class="old">10.000fcfa</p>
+          -->
           <p class="new">8.000fcfa (de 13h à 11h)</p>
         </div>
         <!--

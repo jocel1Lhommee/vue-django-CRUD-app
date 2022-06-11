@@ -31,8 +31,8 @@
         </router-link>
       </div>
     </nav>
+    <router-view />
   </div>
-  <router-view />
 </template>
 
 <script>

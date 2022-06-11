@@ -15,9 +15,14 @@
 
     <h2>Offre de location</h2>
     <div class="CardContainer">
-      <LocationCard titre="Grande Villa" />
-      <LocationCard titre="Petite Villa" />
+      <router-link to="/location">
+        <LocationCard titre="Grande Villa" />
+      </router-link>
+      <router-link to="/location">
+        <LocationCard titre="Petite Villa" />
+      </router-link>
     </div>
+    <router-view />
     <h2>Organisation d'évenementiels:</h2>
     <div class="CardContainer">
       <EvenementCard />
@@ -26,16 +31,15 @@
       <EvenementCard />
     </div>
     <h2>Un Traiteur pour vos évenements</h2>
-    <h3>Menu:</h3>
-    <h4>~Entrée~</h4>
+    <h3>~Entrée~</h3>
     <p>Salade de crudités</p>
     <p>Avocat pamplemousse</p>
-    <h4>~Plat~</h4>
+    <h3>~Plat~</h3>
     <p>Ndolè</p>
     <p>Brochette de boeuf</p>
     <p>Brochette de poisson</p>
     <p>Poulet DG</p>
-    <h4>~Dessert~</h4>
+    <h3>~Dessert~</h3>
     <p>Brochette de fruits</p>
     <p>tarte aux pommes</p>
     <p>Fondant au chocolat</p>
@@ -57,6 +61,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+a {
+  text-decoration: none;
+}
+</style>
 
 <style lang="scss" scoped>
 #home {
@@ -107,14 +117,8 @@ export default {
   }
 
   h3 {
-    font-size: 42px;
-    text-align: center;
-    text-decoration: underline;
-  }
-
-  h4 {
     padding-top: 2vw;
-    font-size: 26px;
+    font-size: 42px;
     text-align: center;
     text-decoration: underline;
     margin-bottom: 0;
@@ -122,7 +126,13 @@ export default {
 
   p {
     text-align: center;
-    font-size: 16px;
+    font-size: 26px;
   }
+}
+</style>
+
+<style>
+#LocationCard {
+  text-decoration: none;
 }
 </style>
